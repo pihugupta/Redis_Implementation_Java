@@ -27,6 +27,7 @@ public class Redis {
     }
 
     // This method returns "OK" if this method is executed successfully else it returns null
+    // Here options accept all the options you want to add like EX/PX(after this you must add the time as a string), XX/NX,KEEPTTL as a list of string
     public String set(String key, Object value, List<String> options) {
         List<Long> list;
         boolean flag = false; // For KEEPTTL
@@ -145,6 +146,7 @@ public class Redis {
     }
 
     // Returns the number of elements added to the list
+    // Here options accept all the options you want to add like XX/NX, CH, INCR as a list of string
     public int zadd(String key, List<Pair<String, Integer>> list, List<String> options) {
         int case1 = 0; //for nx and xx
         int case2 = 0; // for ch
