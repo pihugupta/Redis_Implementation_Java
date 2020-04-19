@@ -1,0 +1,13 @@
+1. Why did you choose that language ?
+=> I chose java because it being a object oriented programming language helped in simple implementation of various functionalities and also to write a clean and modular code. Also java has various API which help in multithreading of operations like ConcurrentMap which is a thread safe data structure.
+
+2. What are the further improvements that can be made to make it efficient ?
+=> We can furthur add more functionalities and also we can make it more optimise by properly designing the system. We can improve the complexity of some functionalities like zrange and zrank.
+
+3. What data structures have you used and why ?
+=> Data structures used were : 
+	a. Concurrent Hash Map : It is used as redis map to store all the data. We used this as this is a thread safe data structure so multiple threads can simultaneouly access them. It internally uses locks to make sure it is consisten when many threads are trying to update it.
+	b. Lists : We also used lists to store the key sets of maps and iterate over it to get the elements in a fixed range.
+
+4. Does your implementation support multi threaded operations? If No why can’t it be? If yes then how ?
+=> Yes, this implementation supports multithreading as we are leveraging the API of java to create a concurrent hash map which internally handles multiple threads by using a lock system.
